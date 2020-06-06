@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import Cats from "../views/Cats.vue";
 import Dogs from "../views/Dogs.vue";
+import Login from "../views/Login.vue";
 import Pet from "../views/Pet.vue";
 
 Vue.use(VueRouter);
@@ -28,6 +29,12 @@ const routes: Array<RouteConfig> = [
     path: "/pets/:species/:id",
     name: "Pet",
     component: Pet,
+  },
+
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
 ];
 

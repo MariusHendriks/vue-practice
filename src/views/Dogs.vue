@@ -3,9 +3,11 @@
     <h1>Dogs</h1>
     <b-table :items="dogs">
       <template v-slot:cell(name)="data">
-        <router-link :to="`/pets/dogs/${data.index}`">{{
+        <router-link :to="`/pets/dogs/${data.index}`">
+          {{
           data.value
-        }}</router-link>
+          }}
+        </router-link>
       </template>
     </b-table>
   </div>
@@ -19,7 +21,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapState(["dogs"]),
-  },
+    ...mapState(["dogs"])
+  }
 };
 </script>
